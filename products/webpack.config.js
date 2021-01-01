@@ -12,11 +12,12 @@ const plugins = [
     exposes: {
       "./ProductsList": "./src/index",
     },
+    shared: ["faker"],
   }),
 ];
 
 const config = {
-  mode: "production",
+  mode: "development",
   devServer: {
     port: 8081,
   },

@@ -12,6 +12,7 @@ const plugins = [
     exposes: {
       "./CartIndex": "./src/index",
     },
+    shared: ["faker"],
   }),
 ];
 
