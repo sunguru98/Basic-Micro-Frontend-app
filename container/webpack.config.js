@@ -7,18 +7,17 @@ const plugins = [
   }),
 
   new ModuleFederationPlugin({
-    name: "products",
-    filename: "remoteEntryProducts.js",
-    exposes: {
-      "./ProductsList": "./src/index",
+    name: "container",
+    remotes: {
+      products: "products@http://localhost:8081/remoteEntryProducts.js",
     },
   }),
 ];
 
 const config = {
-  mode: "production",
+  mode: "development",
   devServer: {
-    port: 8081,
+    port: 8080,
   },
   plugins,
 };
