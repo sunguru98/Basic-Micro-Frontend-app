@@ -10,7 +10,7 @@ const plugins = [
     name: "products",
     filename: "remoteEntryProducts.js",
     exposes: {
-      "./ProductsList": "./src/index",
+      "./ProductsList": "./src/bootstrap",
     },
     shared: ["faker"],
   }),
