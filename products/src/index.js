@@ -1,12 +1,11 @@
 import { commerce } from "faker";
 
-const products = Array.from({ length: 3 }, () => "").map((value) => {
+const products = Array.from({ length: 5 }, () => "").reduce((acc, value) => {
   const productName = commerce.productName();
-  return `
-    <div>
-      ${productName}
-    </div>
-  `;
-});
+  acc += `<div>${productName}</div>`;
+  return acc;
+}, "");
 
-console.log(products);
+document
+  .querySelector("#dev-products")
+  .insertAdjacentHTML("afterbegin", products);
