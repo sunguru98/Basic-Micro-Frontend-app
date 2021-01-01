@@ -10,6 +10,7 @@ const plugins = [
     name: "container",
     remotes: {
       products: "products@http://localhost:8081/remoteEntryProducts.js",
+      cart: "cart@http://localhost:8082/remoteEntryCart.js",
     },
   }),
 ];
