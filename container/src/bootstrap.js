@@ -1,6 +1,7 @@
 import { mount } from "products/ProductsList";
-import "cart/CartIndex";
+import { mount as cartMount } from "cart/CartIndex";
 
-console.log("Container");
-const productsContainer = document.querySelector("#prod-products");
-mount(productsContainer);
+const find = (selector) => document.querySelector(selector);
+
+mount(find("#prod-products"));
+cartMount(find("#prod-cart"));

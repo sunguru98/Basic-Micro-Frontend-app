@@ -10,7 +10,7 @@ const plugins = [
     name: "cart",
     filename: "remoteEntryCart.js",
     exposes: {
-      "./CartIndex": "./src/index",
+      "./CartIndex": "./src/bootstrap",
     },
     shared: ["faker"],
   }),
