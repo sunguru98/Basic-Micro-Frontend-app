@@ -7,10 +7,10 @@ const plugins = [
   }),
 
   new ModuleFederationPlugin({
-    name: "container",
-    remotes: {
-      products: "products@http://localhost:8081/remoteEntryProducts.js",
-      cart: "cart@http://localhost:8082/remoteEntryCart.js",
+    name: "cart",
+    filename: "remoteEntryCart.js",
+    exposes: {
+      "./CartIndex": "./src/index",
     },
   }),
 ];
@@ -18,7 +18,7 @@ const plugins = [
 const config = {
   mode: "development",
   devServer: {
-    port: 8080,
+    port: 8082,
   },
   plugins,
 };
